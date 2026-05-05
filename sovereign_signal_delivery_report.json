@@ -1,0 +1,212 @@
+{
+  "schema": "pf-sovereign-signal-delivery/v1",
+  "generated_at": "2026-05-05T10:36:49.952582+00:00",
+  "date": "2026-05-05",
+  "before_state": {
+    "oracle_dependency": "https://oracle.b1e55ed.permanentupperclass.com/api/v1/spi/signals",
+    "oracle_status": "DEAD (timeout since 2026-04-28)",
+    "price_data_end": "2026-03-06",
+    "price_staleness_days": 60,
+    "regime_state": "SYSTEMIC (frozen \u2014 cannot reclassify with stale data)",
+    "signal_delivery": "POST to third-party oracle (single point of failure)",
+    "signals_delivered_to": "b1e55ed oracle (dead since April 28)",
+    "total_signals_sent_before_death": 15055,
+    "consumer_polling_available": false
+  },
+  "after_state": {
+    "oracle_dependency": null,
+    "oracle_status": "REMOVED \u2014 self-hosted delivery",
+    "price_data_end": "2026-05-04",
+    "price_staleness_days": 1,
+    "regime_state": "SYSTEMIC (confidence 77%, refreshed with 40 new trading days)",
+    "signal_delivery": "Self-hosted /signals/latest endpoint (consumers poll directly)",
+    "signals_delivered_to": "self-hosted /signals/latest endpoint",
+    "consumer_polling_available": true
+  },
+  "price_refresh": {
+    "source": "Yahoo Finance v8 API",
+    "existing_data_end": "2026-03-06",
+    "new_data_start": "2026-03-09",
+    "new_data_end": "2026-05-04",
+    "trading_days_added": 40,
+    "equity_tickers_refreshed": [
+      "NVDA",
+      "AMD",
+      "AVGO",
+      "TSM",
+      "MRVL"
+    ],
+    "crypto_tickers_refreshed": [
+      "TAO",
+      "RNDR",
+      "AKT",
+      "FET"
+    ],
+    "errors": [],
+    "freshness_verdict": "FRESH",
+    "coverage": "5 equity + 4 crypto = 9/9 tickers"
+  },
+  "regime_status": {
+    "before": "SYSTEMIC \u2014 frozen at 2026-03-06 (60d stale, cannot detect transitions)",
+    "after": "SYSTEMIC \u2014 refreshed to 2026-05-04 (40 new trading days)",
+    "reclassification": "SYSTEMIC confirmed with fresh data",
+    "confidence": 77,
+    "duration_days": 60,
+    "note": "Regime engine can now detect transitions as new data flows. All 3 Granger signals still decaying (SEMI_LEADS 38/68, CRYPTO_LEADS 42/85, FULL_DECOUPLE 39/75) \u2014 SYSTEMIC classification is correct for current market structure."
+  },
+  "signal_sample": {
+    "published": [
+      {
+        "signal_id": "pf-BTC-1777977281",
+        "symbol": "BTC",
+        "direction": "NEUTRAL",
+        "signal_type": "TRANSITION_TIMING",
+        "confidence": 0.51,
+        "expected_karma": 0.02,
+        "horizon_hours": 24,
+        "regime": "SYSTEMIC",
+        "regime_confidence": 77,
+        "regime_duration_days": 60,
+        "proximity": 0.012,
+        "voi_included": true,
+        "voi_suppressed": false,
+        "duration_gated": false,
+        "weak_symbol_inverted": false,
+        "policy_gates_applied": {
+          "weak_symbol": false,
+          "duration_gate": false,
+          "voi_filter": false,
+          "regime_filter": true
+        },
+        "timestamp": "2026-05-05T10:34:41.043808+00:00"
+      },
+      {
+        "signal_id": "pf-ETH-1777977281",
+        "symbol": "ETH",
+        "direction": "NEUTRAL",
+        "signal_type": "TRANSITION_TIMING",
+        "confidence": 0.52,
+        "expected_karma": 0.04,
+        "horizon_hours": 24,
+        "regime": "SYSTEMIC",
+        "regime_confidence": 77,
+        "regime_duration_days": 60,
+        "proximity": 0.012,
+        "voi_included": true,
+        "voi_suppressed": false,
+        "duration_gated": false,
+        "weak_symbol_inverted": false,
+        "policy_gates_applied": {
+          "weak_symbol": false,
+          "duration_gate": false,
+          "voi_filter": false,
+          "regime_filter": true
+        },
+        "timestamp": "2026-05-05T10:34:41.043826+00:00"
+      },
+      {
+        "signal_id": "pf-SOL-1777977281",
+        "symbol": "SOL",
+        "direction": "NEUTRAL",
+        "signal_type": "TRANSITION_TIMING",
+        "confidence": 0.56,
+        "expected_karma": 0.12,
+        "horizon_hours": 24,
+        "regime": "SYSTEMIC",
+        "regime_confidence": 77,
+        "regime_duration_days": 60,
+        "proximity": 0.012,
+        "voi_included": true,
+        "voi_suppressed": false,
+        "duration_gated": false,
+        "weak_symbol_inverted": true,
+        "policy_gates_applied": {
+          "weak_symbol": true,
+          "duration_gate": false,
+          "voi_filter": false,
+          "regime_filter": true
+        },
+        "timestamp": "2026-05-05T10:34:41.043836+00:00"
+      },
+      {
+        "signal_id": "pf-LINK-1777977281",
+        "symbol": "LINK",
+        "direction": "NEUTRAL",
+        "signal_type": "TRANSITION_TIMING",
+        "confidence": 0.53,
+        "expected_karma": 0.06,
+        "horizon_hours": 24,
+        "regime": "SYSTEMIC",
+        "regime_confidence": 77,
+        "regime_duration_days": 60,
+        "proximity": 0.012,
+        "voi_included": true,
+        "voi_suppressed": false,
+        "duration_gated": false,
+        "weak_symbol_inverted": false,
+        "policy_gates_applied": {
+          "weak_symbol": false,
+          "duration_gate": false,
+          "voi_filter": false,
+          "regime_filter": true
+        },
+        "timestamp": "2026-05-05T10:34:41.043843+00:00"
+      }
+    ],
+    "suppressed": [],
+    "total_generated": 4,
+    "total_published": 4,
+    "total_suppressed": 0,
+    "regime_during_generation": "SYSTEMIC",
+    "all_signals_type": "TRANSITION_TIMING",
+    "note": "During SYSTEMIC, directional signals are suppressed. Signals report transition timing (proximity=0.012) rather than buy/sell direction."
+  },
+  "policy_gates": {
+    "weak_symbol_inversion": {
+      "SOL": {
+        "action": "INVERT",
+        "raw_accuracy": 0.44,
+        "inverted_accuracy": 0.56,
+        "p_value": 0.0039,
+        "weakness_score": 0.6979,
+        "evidence_source": "weak_symbol_evaluator.py backtest",
+        "applied_in_sample": true
+      }
+    },
+    "duration_gate": {
+      "enabled": true,
+      "max_horizon_hours": 360,
+      "effect": "accuracy 38.6% \u2192 58.9% when gating at 15d",
+      "evidence_source": "signal_voi_router.py backtest",
+      "applied_in_sample": false,
+      "reason_not_applied": "sample uses 24h horizon (below 15d gate)"
+    },
+    "voi_routing": {
+      "enabled": true,
+      "min_expected_karma": 0.0,
+      "effect": "+56% karma improvement (relative backtest)",
+      "evidence_source": "signal_voi_router.py",
+      "signals_suppressed_in_sample": 0,
+      "suppression_reasons": []
+    },
+    "regime_filter": {
+      "current_regime": "SYSTEMIC",
+      "action": "SUPPRESS_DIRECTION",
+      "effect": "All signals published as TRANSITION_TIMING during SYSTEMIC",
+      "evidence_source": "REGIME_FILTER backtest (SYSTEMIC: 10-25% hit, negative avg returns)"
+    }
+  },
+  "source_hashes": {
+    "price_update": "2ad33c7bb7b8507df30aedb4a47b8ea64c16c1319b298175fa7bfef0595b89ac",
+    "signal_payload": "8cc3f1d4fabd739192a4aedffff593f5970c9bb85d25b3924e4572fc0f964f85",
+    "report": "06ea2f710c742d1d0b4e6e990025cc185da4c7b1f8ab99292d301b47496838fb"
+  },
+  "rerun_instructions": {
+    "generate_signals": "python3 signal_endpoint.py",
+    "update_prices": "python3 update_prices.py",
+    "verify": "python3 verify_delivery.py",
+    "run_tests": "python3 -m pytest tests/test_delivery.py -v",
+    "generate_report": "python3 generate_report.py",
+    "note": "All commands run from repository root. Zero external dependencies \u2014 Python 3.8+ stdlib only."
+  }
+}

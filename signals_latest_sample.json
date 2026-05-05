@@ -1,0 +1,145 @@
+{
+  "schema": "pf-sovereign-signals/v1",
+  "producer_id": "post-fiat-signals",
+  "source_wallet": "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
+  "generated_at": "2026-05-05T10:34:41.043846+00:00",
+  "regime": {
+    "state": "SYSTEMIC",
+    "confidence": 77,
+    "duration_days": 60,
+    "proximity": 0.012,
+    "regime_policy": "SUPPRESS_DIRECTION"
+  },
+  "signals": {
+    "published": [
+      {
+        "signal_id": "pf-BTC-1777977281",
+        "symbol": "BTC",
+        "direction": "NEUTRAL",
+        "signal_type": "TRANSITION_TIMING",
+        "confidence": 0.51,
+        "expected_karma": 0.02,
+        "horizon_hours": 24,
+        "regime": "SYSTEMIC",
+        "regime_confidence": 77,
+        "regime_duration_days": 60,
+        "proximity": 0.012,
+        "voi_included": true,
+        "voi_suppressed": false,
+        "duration_gated": false,
+        "weak_symbol_inverted": false,
+        "policy_gates_applied": {
+          "weak_symbol": false,
+          "duration_gate": false,
+          "voi_filter": false,
+          "regime_filter": true
+        },
+        "timestamp": "2026-05-05T10:34:41.043808+00:00"
+      },
+      {
+        "signal_id": "pf-ETH-1777977281",
+        "symbol": "ETH",
+        "direction": "NEUTRAL",
+        "signal_type": "TRANSITION_TIMING",
+        "confidence": 0.52,
+        "expected_karma": 0.04,
+        "horizon_hours": 24,
+        "regime": "SYSTEMIC",
+        "regime_confidence": 77,
+        "regime_duration_days": 60,
+        "proximity": 0.012,
+        "voi_included": true,
+        "voi_suppressed": false,
+        "duration_gated": false,
+        "weak_symbol_inverted": false,
+        "policy_gates_applied": {
+          "weak_symbol": false,
+          "duration_gate": false,
+          "voi_filter": false,
+          "regime_filter": true
+        },
+        "timestamp": "2026-05-05T10:34:41.043826+00:00"
+      },
+      {
+        "signal_id": "pf-SOL-1777977281",
+        "symbol": "SOL",
+        "direction": "NEUTRAL",
+        "signal_type": "TRANSITION_TIMING",
+        "confidence": 0.56,
+        "expected_karma": 0.12,
+        "horizon_hours": 24,
+        "regime": "SYSTEMIC",
+        "regime_confidence": 77,
+        "regime_duration_days": 60,
+        "proximity": 0.012,
+        "voi_included": true,
+        "voi_suppressed": false,
+        "duration_gated": false,
+        "weak_symbol_inverted": true,
+        "policy_gates_applied": {
+          "weak_symbol": true,
+          "duration_gate": false,
+          "voi_filter": false,
+          "regime_filter": true
+        },
+        "timestamp": "2026-05-05T10:34:41.043836+00:00"
+      },
+      {
+        "signal_id": "pf-LINK-1777977281",
+        "symbol": "LINK",
+        "direction": "NEUTRAL",
+        "signal_type": "TRANSITION_TIMING",
+        "confidence": 0.53,
+        "expected_karma": 0.06,
+        "horizon_hours": 24,
+        "regime": "SYSTEMIC",
+        "regime_confidence": 77,
+        "regime_duration_days": 60,
+        "proximity": 0.012,
+        "voi_included": true,
+        "voi_suppressed": false,
+        "duration_gated": false,
+        "weak_symbol_inverted": false,
+        "policy_gates_applied": {
+          "weak_symbol": false,
+          "duration_gate": false,
+          "voi_filter": false,
+          "regime_filter": true
+        },
+        "timestamp": "2026-05-05T10:34:41.043843+00:00"
+      }
+    ],
+    "suppressed": [],
+    "total_generated": 4,
+    "total_published": 4,
+    "total_suppressed": 0
+  },
+  "policy_summary": {
+    "weak_symbol_inversions": [
+      {
+        "symbol": "SOL",
+        "original_direction": 1,
+        "inverted_direction": -1,
+        "reason": "accuracy 44.0%, weakness score 0.6979, inversion to 56.0% (p=0.0039)"
+      }
+    ],
+    "duration_gated_signals": [],
+    "voi_suppressions": [],
+    "regime_filter": {
+      "action": "SUPPRESS_DIRECTION",
+      "reason": "historical hit rates 10-25% with negative avg returns under risk-off",
+      "publish_transition_timing": true,
+      "publish_direction": false
+    }
+  },
+  "metadata": {
+    "api_source": "http://localhost:8080",
+    "api_reachable": true,
+    "api_error": null,
+    "horizon_hours": 24,
+    "oracle_dependency": null,
+    "legacy_oracle_removed": true,
+    "self_hosted": true
+  },
+  "content_hash": "8cc3f1d4fabd739192a4aedffff593f5970c9bb85d25b3924e4572fc0f964f85"
+}

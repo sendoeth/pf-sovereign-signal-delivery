@@ -1,0 +1,510 @@
+{
+  "schema": "pf-signal-stack-integration-proof/v1",
+  "generated_at": "2026-05-07T13:51:11.563321+00:00",
+  "date": "2026-05-07",
+  "proof_type": "live_integration_audit",
+  "endpoint_evidence": {
+    "endpoint": "http://localhost:8080/signals/latest",
+    "public_endpoint": "http://84.32.34.46:8080/signals/latest",
+    "external_access_verified": true,
+    "curl_command": "curl -s http://localhost:8080/signals/latest",
+    "curl_timestamp": "2026-05-07T13:51:11.283943+00:00",
+    "http_status": 200,
+    "response_body_sha256": "de836e606ee67984f98981f01bf787b4f2d6cc8f166d970dea49a14f3ee9d04e",
+    "content_hash": "7d4bb3a074572a00333d7371544b62a8358882ff86320471af6623b62d17b21e",
+    "server_uptime_sec": 375,
+    "schema_version": "pf-sovereign-signals/v1",
+    "producer_id": "post-fiat-signals",
+    "source_wallet": "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
+    "regime_state": "SYSTEMIC",
+    "regime_confidence": 77,
+    "regime_proximity": 0.012,
+    "regime_duration_days": 62,
+    "signals_published": 4,
+    "signals_suppressed": 0,
+    "oracle_dependency": null,
+    "self_hosted": true,
+    "legacy_oracle_removed": true,
+    "signals_detail": {
+      "published": [
+        {
+          "symbol": "BTC",
+          "direction": "NEUTRAL",
+          "signal_type": "TRANSITION_TIMING",
+          "confidence": 0.51,
+          "expected_karma": 0.02,
+          "weak_symbol_inverted": false,
+          "voi_included": true
+        },
+        {
+          "symbol": "ETH",
+          "direction": "NEUTRAL",
+          "signal_type": "TRANSITION_TIMING",
+          "confidence": 0.52,
+          "expected_karma": 0.04,
+          "weak_symbol_inverted": false,
+          "voi_included": true
+        },
+        {
+          "symbol": "SOL",
+          "direction": "NEUTRAL",
+          "signal_type": "TRANSITION_TIMING",
+          "confidence": 0.56,
+          "expected_karma": 0.12,
+          "weak_symbol_inverted": true,
+          "voi_included": true
+        },
+        {
+          "symbol": "LINK",
+          "direction": "NEUTRAL",
+          "signal_type": "TRANSITION_TIMING",
+          "confidence": 0.53,
+          "expected_karma": 0.06,
+          "weak_symbol_inverted": false,
+          "voi_included": true
+        }
+      ],
+      "suppressed": []
+    },
+    "policy_summary": {
+      "weak_symbol_inversions": [
+        {
+          "symbol": "SOL",
+          "original": 1,
+          "inverted": -1,
+          "reason": "accuracy 44.0% \u2192 56.0% inverted (p=0.0039)"
+        }
+      ],
+      "duration_gated_signals": 0,
+      "voi_suppressions": 0,
+      "regime_filter": "SUPPRESS_DIRECTION"
+    }
+  },
+  "endpoint_survey": {
+    "total_endpoints": 9,
+    "reachable": 9,
+    "unreachable": 0,
+    "endpoints": {
+      "/health": {
+        "reachable": true,
+        "has_data": true,
+        "error": null
+      },
+      "/regime/current": {
+        "reachable": true,
+        "has_data": true,
+        "error": null
+      },
+      "/signals/filtered": {
+        "reachable": true,
+        "has_data": true,
+        "error": null
+      },
+      "/signals/latest": {
+        "reachable": true,
+        "has_data": true,
+        "error": null
+      },
+      "/signals/reliability": {
+        "reachable": true,
+        "has_data": true,
+        "error": null
+      },
+      "/regime/history": {
+        "reachable": true,
+        "has_data": true,
+        "error": null
+      },
+      "/system/status": {
+        "reachable": true,
+        "has_data": true,
+        "error": null
+      },
+      "/ledger/summary": {
+        "reachable": true,
+        "has_data": true,
+        "error": null
+      },
+      "/consumer/activity": {
+        "reachable": true,
+        "has_data": true,
+        "error": null
+      }
+    }
+  },
+  "consumer_audit": {
+    "audit_tool": "pf-consumer-audit/audit_producer.py",
+    "audit_tool_version": "1.0.0",
+    "proof_surface_path": "/home/postfiat/pf-regime-sdk/proof_surface.json",
+    "signals_audited": 4,
+    "trust_policy": "moderate",
+    "grade": "D",
+    "verdict": "DO_NOT_TRUST",
+    "trust_score": 0.375,
+    "dimension_scores": {
+      "schema_compliance": null,
+      "signal_schema": "PASS",
+      "proof_schema": null,
+      "freshness": "SKIP",
+      "reputation": "SKIP",
+      "drift": "SKIP",
+      "routing": "SKIP"
+    },
+    "exit_code": 0,
+    "full_audit_report": {
+      "meta": {
+        "audit_version": "1.0.0",
+        "generated_at": "2026-05-07T13:51:11.484663+00:00",
+        "producer_id": "post-fiat-signals",
+        "auditor": "self-integration-test",
+        "artifacts_provided": {
+          "signal_log": true,
+          "proof_surface": true,
+          "routing_config": false,
+          "reputation_registry": false
+        },
+        "companion_versions": {
+          "signal_schema": "1.0.0",
+          "resolution_protocol": "1.0.0",
+          "routing_protocol": "1.0.0",
+          "aggregation_protocol": "1.0.0",
+          "proof_protocol": "1.0.0",
+          "lifecycle_pipeline": "1.0.0"
+        }
+      },
+      "schema_compliance": {
+        "signal_schema": {
+          "status": "PASS",
+          "schema_version": "1.0.0",
+          "total_signals": 4,
+          "valid_signals": 4,
+          "invalid_signals": 0,
+          "conformance_distribution": {
+            "MINIMAL": 0,
+            "STANDARD": 4,
+            "FULL": 0,
+            "INCOMPLETE": 0
+          },
+          "common_errors": [],
+          "checks": [
+            {
+              "check_id": "SCHEMA_SIGNAL_VALIDATION",
+              "status": "PASS",
+              "description": "Validated 4 signals against signal schema.",
+              "detail": "4 valid, 0 invalid.",
+              "expected": "All valid",
+              "actual": "0 invalid",
+              "severity": "LOW"
+            }
+          ]
+        },
+        "proof_surface": {
+          "status": "FAIL",
+          "schema_version": "1.0.0",
+          "n_schema_errors": 8,
+          "schema_errors": [
+            "'freshness' is a required property",
+            "'snapshot' is a required property",
+            "'rolling_windows' is a required property",
+            "'drift' is a required property",
+            "'protocol_version' is a required property",
+            "'protocol_version' is a required property",
+            "'signal_schema_version' is a required property",
+            "'resolution_protocol_version' is a required property"
+          ],
+          "checks": [
+            {
+              "check_id": "SCHEMA_PROOF_VALIDATION",
+              "status": "FAIL",
+              "description": "Validated proof surface against proof_protocol.json.",
+              "detail": "8 schema errors found.",
+              "severity": "CRITICAL"
+            },
+            {
+              "check_id": "SCHEMA_PROOF_KEY_META",
+              "status": "PASS",
+              "description": "Proof surface has 'meta' key."
+            },
+            {
+              "check_id": "SCHEMA_PROOF_KEY_FRESHNESS",
+              "status": "FAIL",
+              "description": "Proof surface has 'freshness' key.",
+              "severity": "HIGH"
+            },
+            {
+              "check_id": "SCHEMA_PROOF_KEY_SNAPSHOT",
+              "status": "FAIL",
+              "description": "Proof surface has 'snapshot' key.",
+              "severity": "HIGH"
+            },
+            {
+              "check_id": "SCHEMA_PROOF_KEY_ROLLING_WINDOWS",
+              "status": "FAIL",
+              "description": "Proof surface has 'rolling_windows' key.",
+              "severity": "HIGH"
+            },
+            {
+              "check_id": "SCHEMA_PROOF_KEY_DRIFT",
+              "status": "FAIL",
+              "description": "Proof surface has 'drift' key.",
+              "severity": "HIGH"
+            },
+            {
+              "check_id": "SCHEMA_PROOF_KEY_REPUTATION",
+              "status": "FAIL",
+              "description": "Proof surface has 'reputation' key.",
+              "severity": "HIGH"
+            },
+            {
+              "check_id": "SCHEMA_PROOF_KEY_LIMITATIONS",
+              "status": "PASS",
+              "description": "Proof surface has 'limitations' key."
+            }
+          ]
+        },
+        "routing_config": {
+          "status": "SKIP",
+          "checks": []
+        },
+        "overall_status": "FAIL"
+      },
+      "freshness_verification": {
+        "status": "SKIP",
+        "freshness_grade": "UNKNOWN",
+        "checks": [
+          {
+            "check_id": "FRESHNESS_NO_DATA",
+            "status": "SKIP",
+            "description": "No freshness data in proof surface."
+          }
+        ]
+      },
+      "reputation_recomputation": {
+        "status": "SKIP",
+        "claimed_score": null,
+        "claimed_grade": null,
+        "recomputed_score": null,
+        "recomputed_grade": null,
+        "score_discrepancy": null,
+        "grade_match": null,
+        "checks": [
+          {
+            "check_id": "REP_NO_WINDOWS",
+            "status": "SKIP",
+            "description": "No all-time rolling window found."
+          }
+        ]
+      },
+      "drift_verification": {
+        "status": "SKIP",
+        "drift_status": "UNKNOWN",
+        "drift_direction": "unknown",
+        "cusum_pos": 0.0,
+        "cusum_neg": 0.0,
+        "observations": 0,
+        "checks": [
+          {
+            "check_id": "DRIFT_NO_DATA",
+            "status": "SKIP",
+            "description": "No drift data in proof surface."
+          }
+        ]
+      },
+      "routing_audit": {
+        "status": "SKIP",
+        "total_signals_routed": 0,
+        "emit_count": 0,
+        "withhold_count": 0,
+        "invert_count": 0,
+        "filter_rate": 0.0,
+        "gates_audited": [],
+        "checks": [
+          {
+            "check_id": "ROUTING_NO_CONFIG",
+            "status": "SKIP",
+            "description": "No routing config provided."
+          }
+        ]
+      },
+      "aggregation_inspection": {
+        "status": "SKIP",
+        "n_producers_in_registry": 0,
+        "target_producer_rank": null,
+        "target_producer_weight": null,
+        "concentration_risk": {
+          "hhi": 0.0,
+          "dominant_producer": null,
+          "dominant_weight": null
+        },
+        "checks": [
+          {
+            "check_id": "AGG_NO_REGISTRY",
+            "status": "SKIP",
+            "description": "No reputation registry provided."
+          }
+        ]
+      },
+      "trust_grade": {
+        "score": 0.375,
+        "grade": "D",
+        "verdict": "DO_NOT_TRUST",
+        "components": {
+          "schema_compliance": {
+            "score": 0.0,
+            "weight": 0.15,
+            "weighted": 0.0
+          },
+          "freshness": {
+            "score": 0.0,
+            "weight": 0.15,
+            "weighted": 0.0
+          },
+          "drift_health": {
+            "score": 0.5,
+            "weight": 0.15,
+            "weighted": 0.075
+          },
+          "reputation_consistency": {
+            "score": 0.5,
+            "weight": 0.2,
+            "weighted": 0.1
+          },
+          "signal_volume": {
+            "score": 0.0,
+            "weight": 0.1,
+            "weighted": 0.0
+          },
+          "calibration_quality": {
+            "score": 1.0,
+            "weight": 0.15,
+            "weighted": 0.15
+          },
+          "routing_discipline": {
+            "score": 0.5,
+            "weight": 0.1,
+            "weighted": 0.05
+          }
+        },
+        "cold_start": true,
+        "policy": "moderate"
+      },
+      "findings": [
+        {
+          "finding_id": "F002",
+          "severity": "CRITICAL",
+          "category": "SCHEMA",
+          "title": "Proof surface schema validation failed",
+          "description": "8 schema errors in proof surface.",
+          "recommendation": "Proof surface cannot be trusted. Request corrected artifact."
+        },
+        {
+          "finding_id": "F051",
+          "severity": "CRITICAL",
+          "category": "TRUST",
+          "title": "Trust assessment: DO NOT TRUST",
+          "description": "Composite trust score 0.3750 (D) is below threshold.",
+          "recommendation": "Do not consume this producer's signals without further investigation."
+        },
+        {
+          "finding_id": "F050",
+          "severity": "MEDIUM",
+          "category": "TRUST",
+          "title": "Insufficient evidence for reliable trust assessment",
+          "description": "Producer has fewer than 100 resolved signals.",
+          "recommendation": "Trust assessment is preliminary. Accumulate more evidence."
+        },
+        {
+          "finding_id": "F040",
+          "severity": "LOW",
+          "category": "ROUTING",
+          "title": "No routing config available for audit",
+          "description": "Producer did not provide routing configuration.",
+          "recommendation": "Request routing config for full transparency audit."
+        }
+      ],
+      "summary": {
+        "total_checks": 14,
+        "passed": 3,
+        "failed": 6,
+        "warnings": 0,
+        "skipped": 5,
+        "total_findings": 4,
+        "critical_findings": 2,
+        "high_findings": 0
+      },
+      "limitations": [
+        {
+          "id": "INCOMPLETE_ARTIFACTS",
+          "description": "Missing artifacts: routing_config, reputation_registry. Audit scope limited.",
+          "bias_direction": "OVERSTATED_TRUST",
+          "bias_magnitude": "2 of 4 artifacts missing. Trust score may be higher than warranted."
+        },
+        {
+          "id": "NO_RESOLVED_SIGNALS",
+          "description": "No resolved signals available for independent accuracy recomputation.",
+          "bias_direction": "INDETERMINATE",
+          "bias_magnitude": "Cannot verify claimed accuracy. Reputation recomputation uses claimed metrics."
+        },
+        {
+          "id": "COLD_START",
+          "description": "Only 0 resolved signals. Minimum 100 recommended.",
+          "bias_direction": "INDETERMINATE",
+          "bias_magnitude": "Trust assessment is preliminary. Wide confidence intervals on all metrics."
+        },
+        {
+          "id": "SINGLE_SNAPSHOT",
+          "description": "Audit is based on a single proof surface snapshot. No evolution trajectory available.",
+          "bias_direction": "INDETERMINATE",
+          "bias_magnitude": "Cannot assess whether metrics are improving or degrading. Use pf-lifecycle-pipeline evolution_report.py for trend analysis."
+        }
+      ]
+    }
+  },
+  "integration_summary": {
+    "endpoint_live": true,
+    "external_accessible": true,
+    "schema_valid": true,
+    "no_oracle_dependency": true,
+    "self_hosted": true,
+    "consumer_audit_ran": true,
+    "audit_grade": "D",
+    "policy_gates_active": {
+      "weak_symbol_inversion": true,
+      "voi_routing": true,
+      "duration_gate": true,
+      "regime_filter": "SUPPRESS_DIRECTION"
+    },
+    "health": {
+      "status": "ok",
+      "producerId": "post-fiat-signals",
+      "uptime": 375,
+      "uptimeHuman": "0h 6m 15s",
+      "lastRefresh": "2026-05-07T13:45:04.054Z",
+      "dataAgeSec": 367,
+      "isStale": false,
+      "refreshCount": 1,
+      "refreshIntervalMin": 15,
+      "dataFresh": true,
+      "lastError": null,
+      "schemaVersion": "1.1.0",
+      "source": "rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
+      "endpoints": 7,
+      "safetyVerdicts": {
+        "watchdog_verdict": "STOP",
+        "signal_fidelity": "STOP",
+        "regime_confidence_verdict": "DEGRADED"
+      }
+    }
+  },
+  "source_hashes": {
+    "signal_payload_content_hash": "7d4bb3a074572a00333d7371544b62a8358882ff86320471af6623b62d17b21e",
+    "signal_payload_body_sha256": "de836e606ee67984f98981f01bf787b4f2d6cc8f166d970dea49a14f3ee9d04e",
+    "proof_surface_sha256": "4b1f45066c2fe77e09c29f0d56e30fbbce384dfbf70d4067fe2b2e3207d2668e",
+    "proof_sha256": "7a0cfb52cb22f5af9142044fc188a81f0bc76201e13c60bb7b425d22b21521e1"
+  },
+  "rerun_instructions": {
+    "prerequisites": "Signal API must be running on port 8080 with /signals/latest route",
+    "command": "python3 run_integration_proof.py",
+    "note": "Zero external dependencies. Python 3.8+ stdlib only."
+  }
+}

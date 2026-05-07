@@ -1,0 +1,943 @@
+{
+  "schema": "pf-integration-proof-verification/v1",
+  "generated_at": "2026-05-07T13:53:15.161817+00:00",
+  "proof_path": "signal_stack_integration_proof.json",
+  "proof_date": "2026-05-07",
+  "proof_generated_at": "2026-05-07T13:51:11.563321+00:00",
+  "live_verification": true,
+  "summary": {
+    "total_checks": 117,
+    "passed": 117,
+    "failed": 0,
+    "pass_rate": 100.0,
+    "grade": "A",
+    "verdict": "PASS",
+    "critical_failures": 0
+  },
+  "categories": [
+    {
+      "category": "structure",
+      "checks": [
+        {
+          "check_id": "STRUCT_SCHEMA",
+          "passed": true,
+          "detail": "Required field 'schema' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "STRUCT_GENERATED_AT",
+          "passed": true,
+          "detail": "Required field 'generated_at' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "STRUCT_DATE",
+          "passed": true,
+          "detail": "Required field 'date' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "STRUCT_PROOF_TYPE",
+          "passed": true,
+          "detail": "Required field 'proof_type' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "STRUCT_ENDPOINT_EVIDENCE",
+          "passed": true,
+          "detail": "Required field 'endpoint_evidence' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "STRUCT_ENDPOINT_SURVEY",
+          "passed": true,
+          "detail": "Required field 'endpoint_survey' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "STRUCT_CONSUMER_AUDIT",
+          "passed": true,
+          "detail": "Required field 'consumer_audit' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "STRUCT_INTEGRATION_SUMMARY",
+          "passed": true,
+          "detail": "Required field 'integration_summary' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "STRUCT_SOURCE_HASHES",
+          "passed": true,
+          "detail": "Required field 'source_hashes' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "STRUCT_RERUN_INSTRUCTIONS",
+          "passed": true,
+          "detail": "Required field 'rerun_instructions' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "STRUCT_SCHEMA_VALUE",
+          "passed": true,
+          "detail": "Schema: pf-signal-stack-integration-proof/v1",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "STRUCT_PROOF_TYPE",
+          "passed": true,
+          "detail": "Proof type: live_integration_audit",
+          "severity": "HIGH",
+          "remediation": null
+        }
+      ],
+      "passed": 12,
+      "failed": 0,
+      "total": 12
+    },
+    {
+      "category": "timestamp",
+      "checks": [
+        {
+          "check_id": "TS_PARSEABLE",
+          "passed": true,
+          "detail": "Timestamp parseable: 2026-05-07T13:51:11.563321+00:00",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "TS_NOT_FUTURE",
+          "passed": true,
+          "detail": "Timestamp is not in the future",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "TS_NOT_STALE",
+          "passed": true,
+          "detail": "Timestamp within 30d",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "TS_DATE_FORMAT",
+          "passed": true,
+          "detail": "Date format valid: 2026-05-07",
+          "severity": "LOW",
+          "remediation": null
+        }
+      ],
+      "passed": 4,
+      "failed": 0,
+      "total": 4
+    },
+    {
+      "category": "endpoint_evidence",
+      "checks": [
+        {
+          "check_id": "EP_ENDPOINT",
+          "passed": true,
+          "detail": "'endpoint' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_PUBLIC_ENDPOINT",
+          "passed": true,
+          "detail": "'public_endpoint' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_EXTERNAL_ACCESS_VERIFIED",
+          "passed": true,
+          "detail": "'external_access_verified' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_CURL_COMMAND",
+          "passed": true,
+          "detail": "'curl_command' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_CURL_TIMESTAMP",
+          "passed": true,
+          "detail": "'curl_timestamp' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_HTTP_STATUS",
+          "passed": true,
+          "detail": "'http_status' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_RESPONSE_BODY_SHA256",
+          "passed": true,
+          "detail": "'response_body_sha256' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_CONTENT_HASH",
+          "passed": true,
+          "detail": "'content_hash' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_SCHEMA_VERSION",
+          "passed": true,
+          "detail": "'schema_version' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_PRODUCER_ID",
+          "passed": true,
+          "detail": "'producer_id' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_SOURCE_WALLET",
+          "passed": true,
+          "detail": "'source_wallet' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_REGIME_STATE",
+          "passed": true,
+          "detail": "'regime_state' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_SIGNALS_PUBLISHED",
+          "passed": true,
+          "detail": "'signals_published' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_SELF_HOSTED",
+          "passed": true,
+          "detail": "'self_hosted' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_SIGNALS_DETAIL",
+          "passed": true,
+          "detail": "'signals_detail' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_POLICY_SUMMARY",
+          "passed": true,
+          "detail": "'policy_summary' present",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_HTTP_200",
+          "passed": true,
+          "detail": "HTTP status: 200",
+          "severity": "CRITICAL",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_SELF_HOSTED",
+          "passed": true,
+          "detail": "Self-hosted: True",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_EXTERNAL_ACCESS",
+          "passed": true,
+          "detail": "External access: True",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_NO_ORACLE",
+          "passed": true,
+          "detail": "Oracle dependency: None",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_LEGACY_REMOVED",
+          "passed": true,
+          "detail": "Legacy oracle removed: True",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_HASH_FORMAT",
+          "passed": true,
+          "detail": "Content hash format: valid hex64",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_BODY_HASH_FORMAT",
+          "passed": true,
+          "detail": "Body hash format: valid hex64",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "EP_WALLET_FORMAT",
+          "passed": true,
+          "detail": "Source wallet: rfLJ4ZRnqmGFLAcMvCD56nKGbjpdTJmMqo",
+          "severity": "LOW",
+          "remediation": null
+        }
+      ],
+      "passed": 24,
+      "failed": 0,
+      "total": 24
+    },
+    {
+      "category": "signals",
+      "checks": [
+        {
+          "check_id": "SIG_HAS_PUBLISHED",
+          "passed": true,
+          "detail": "Published signals: 4",
+          "severity": "CRITICAL",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_0_SYMBOL",
+          "passed": true,
+          "detail": "Signal 0 symbol: BTC",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_0_DIRECTION",
+          "passed": true,
+          "detail": "Signal 0 direction: NEUTRAL",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_0_CONFIDENCE",
+          "passed": true,
+          "detail": "Signal 0 confidence: 0.51",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_0_TYPE",
+          "passed": true,
+          "detail": "Signal 0 type: TRANSITION_TIMING",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_0_KARMA",
+          "passed": true,
+          "detail": "Signal 0 expected_karma: 0.02",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_1_SYMBOL",
+          "passed": true,
+          "detail": "Signal 1 symbol: ETH",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_1_DIRECTION",
+          "passed": true,
+          "detail": "Signal 1 direction: NEUTRAL",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_1_CONFIDENCE",
+          "passed": true,
+          "detail": "Signal 1 confidence: 0.52",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_1_TYPE",
+          "passed": true,
+          "detail": "Signal 1 type: TRANSITION_TIMING",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_1_KARMA",
+          "passed": true,
+          "detail": "Signal 1 expected_karma: 0.04",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_2_SYMBOL",
+          "passed": true,
+          "detail": "Signal 2 symbol: SOL",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_2_DIRECTION",
+          "passed": true,
+          "detail": "Signal 2 direction: NEUTRAL",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_2_CONFIDENCE",
+          "passed": true,
+          "detail": "Signal 2 confidence: 0.56",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_2_TYPE",
+          "passed": true,
+          "detail": "Signal 2 type: TRANSITION_TIMING",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_2_KARMA",
+          "passed": true,
+          "detail": "Signal 2 expected_karma: 0.12",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_3_SYMBOL",
+          "passed": true,
+          "detail": "Signal 3 symbol: LINK",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_3_DIRECTION",
+          "passed": true,
+          "detail": "Signal 3 direction: NEUTRAL",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_3_CONFIDENCE",
+          "passed": true,
+          "detail": "Signal 3 confidence: 0.53",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_3_TYPE",
+          "passed": true,
+          "detail": "Signal 3 type: TRANSITION_TIMING",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "SIG_3_KARMA",
+          "passed": true,
+          "detail": "Signal 3 expected_karma: 0.06",
+          "severity": "LOW",
+          "remediation": null
+        }
+      ],
+      "passed": 21,
+      "failed": 0,
+      "total": 21
+    },
+    {
+      "category": "policy_gates",
+      "checks": [
+        {
+          "check_id": "POL_REGIME_FILTER",
+          "passed": true,
+          "detail": "Regime filter: SUPPRESS_DIRECTION",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "POL_VOI_FIELD",
+          "passed": true,
+          "detail": "VOI suppressions field present: True",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "POL_DURATION_FIELD",
+          "passed": true,
+          "detail": "Duration gate field present: True",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "POL_WEAK_SYMBOL_LIST",
+          "passed": true,
+          "detail": "Weak symbol inversions: 1 entries",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "POL_INVERSION_0_SYMBOL",
+          "passed": true,
+          "detail": "Inversion 0 symbol: SOL",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "POL_INVERSION_0_REASON",
+          "passed": true,
+          "detail": "Inversion 0 has reason: True",
+          "severity": "LOW",
+          "remediation": null
+        }
+      ],
+      "passed": 6,
+      "failed": 0,
+      "total": 6
+    },
+    {
+      "category": "endpoint_survey",
+      "checks": [
+        {
+          "check_id": "SURV_TOTAL",
+          "passed": true,
+          "detail": "Total endpoints: 9",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "SURV_ALL_REACHABLE",
+          "passed": true,
+          "detail": "Unreachable: 0",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "SURV__HEALTH",
+          "passed": true,
+          "detail": "Endpoint /health: reachable",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "SURV__REGIME_CURRENT",
+          "passed": true,
+          "detail": "Endpoint /regime/current: reachable",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "SURV__SIGNALS_FILTERED",
+          "passed": true,
+          "detail": "Endpoint /signals/filtered: reachable",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "SURV__SIGNALS_LATEST",
+          "passed": true,
+          "detail": "Endpoint /signals/latest: reachable",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "SURV__SIGNALS_RELIABILITY",
+          "passed": true,
+          "detail": "Endpoint /signals/reliability: reachable",
+          "severity": "MEDIUM",
+          "remediation": null
+        }
+      ],
+      "passed": 7,
+      "failed": 0,
+      "total": 7
+    },
+    {
+      "category": "consumer_audit",
+      "checks": [
+        {
+          "check_id": "AUDIT_TOOL",
+          "passed": true,
+          "detail": "Audit tool: pf-consumer-audit/audit_producer.py",
+          "severity": "CRITICAL",
+          "remediation": null
+        },
+        {
+          "check_id": "AUDIT_GRADE",
+          "passed": true,
+          "detail": "Audit grade: D",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "AUDIT_VERDICT",
+          "passed": true,
+          "detail": "Audit verdict: DO_NOT_TRUST",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "AUDIT_TRUST_SCORE",
+          "passed": true,
+          "detail": "Trust score: 0.375",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "AUDIT_EXIT_CODE",
+          "passed": true,
+          "detail": "Exit code: 0",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "AUDIT_SIGNALS_COUNTED",
+          "passed": true,
+          "detail": "Signals audited: 4",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "AUDIT_FULL_REPORT",
+          "passed": true,
+          "detail": "Full report: present",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "AUDIT_TG_COMPONENTS",
+          "passed": true,
+          "detail": "Trust grade components: 7 dimensions",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "AUDIT_SIGNAL_SCHEMA_PASS",
+          "passed": true,
+          "detail": "Signal schema status: PASS",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "AUDIT_VALID_SIGNALS",
+          "passed": true,
+          "detail": "Valid: 4/4",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "AUDIT_FINDINGS",
+          "passed": true,
+          "detail": "Findings: 4 items",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "AUDIT_LIMITATIONS",
+          "passed": true,
+          "detail": "Limitations: 4 items",
+          "severity": "LOW",
+          "remediation": null
+        }
+      ],
+      "passed": 12,
+      "failed": 0,
+      "total": 12
+    },
+    {
+      "category": "integration_summary",
+      "checks": [
+        {
+          "check_id": "INTG_ENDPOINT_LIVE",
+          "passed": true,
+          "detail": "endpoint_live: True",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "INTG_EXTERNAL_ACCESSIBLE",
+          "passed": true,
+          "detail": "external_accessible: True",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "INTG_SCHEMA_VALID",
+          "passed": true,
+          "detail": "schema_valid: True",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "INTG_NO_ORACLE_DEPENDENCY",
+          "passed": true,
+          "detail": "no_oracle_dependency: True",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "INTG_SELF_HOSTED",
+          "passed": true,
+          "detail": "self_hosted: True",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "INTG_CONSUMER_AUDIT_RAN",
+          "passed": true,
+          "detail": "consumer_audit_ran: True",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "INTG_GATES_PRESENT",
+          "passed": true,
+          "detail": "Policy gates: 4 configured",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "INTG_HEALTH_PRESENT",
+          "passed": true,
+          "detail": "Health status: ok",
+          "severity": "MEDIUM",
+          "remediation": null
+        }
+      ],
+      "passed": 8,
+      "failed": 0,
+      "total": 8
+    },
+    {
+      "category": "source_hashes",
+      "checks": [
+        {
+          "check_id": "HASH_SIGNAL_PAYLOAD_CONTENT_HASH",
+          "passed": true,
+          "detail": "signal_payload_content_hash: valid hex64",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "HASH_SIGNAL_PAYLOAD_BODY_SHA256",
+          "passed": true,
+          "detail": "signal_payload_body_sha256: valid hex64",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "HASH_PROOF_SHA256",
+          "passed": true,
+          "detail": "proof_sha256: valid hex64",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "HASH_PROOF_RECOMPUTE",
+          "passed": true,
+          "detail": "Proof hash recomputation: MATCH",
+          "severity": "CRITICAL",
+          "remediation": null
+        },
+        {
+          "check_id": "HASH_CONTENT_CONSISTENT",
+          "passed": true,
+          "detail": "Content hash cross-ref: consistent",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "HASH_BODY_CONSISTENT",
+          "passed": true,
+          "detail": "Body hash cross-ref: consistent",
+          "severity": "HIGH",
+          "remediation": null
+        }
+      ],
+      "passed": 6,
+      "failed": 0,
+      "total": 6
+    },
+    {
+      "category": "rerun_instructions",
+      "checks": [
+        {
+          "check_id": "RERUN_COMMAND",
+          "passed": true,
+          "detail": "Command: python3 run_integration_proof.py",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "RERUN_PREREQS",
+          "passed": true,
+          "detail": "Prerequisites: present",
+          "severity": "LOW",
+          "remediation": null
+        }
+      ],
+      "passed": 2,
+      "failed": 0,
+      "total": 2
+    },
+    {
+      "category": "regime_context",
+      "checks": [
+        {
+          "check_id": "REGIME_STATE_VALID",
+          "passed": true,
+          "detail": "Regime state: SYSTEMIC",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "REGIME_CONFIDENCE_RANGE",
+          "passed": true,
+          "detail": "Regime confidence: 77",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "REGIME_DURATION_POSITIVE",
+          "passed": true,
+          "detail": "Regime duration: 62d",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "REGIME_PROXIMITY_RANGE",
+          "passed": true,
+          "detail": "Regime proximity: 0.012",
+          "severity": "LOW",
+          "remediation": null
+        }
+      ],
+      "passed": 4,
+      "failed": 0,
+      "total": 4
+    },
+    {
+      "category": "cross_references",
+      "checks": [
+        {
+          "check_id": "XREF_AUDIT_GRADE",
+          "passed": true,
+          "detail": "Summary grade (D) vs audit grade (D)",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "XREF_SIGNAL_COUNT",
+          "passed": true,
+          "detail": "Published count (4) vs detail count (4)",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "XREF_AUDIT_SIGNAL_COUNT",
+          "passed": true,
+          "detail": "Audited (4) vs published (4)",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "XREF_SELF_HOSTED",
+          "passed": true,
+          "detail": "Endpoint (True) vs summary (True)",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "XREF_ENDPOINT_LIVE",
+          "passed": true,
+          "detail": "Summary live (True) + HTTP status (200)",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "XREF_PRODUCER_ID",
+          "passed": true,
+          "detail": "Endpoint producer (post-fiat-signals) vs audit producer (post-fiat-signals)",
+          "severity": "MEDIUM",
+          "remediation": null
+        }
+      ],
+      "passed": 6,
+      "failed": 0,
+      "total": 6
+    },
+    {
+      "category": "live_verification",
+      "checks": [
+        {
+          "check_id": "LIVE_LOCAL_REACHABLE",
+          "passed": true,
+          "detail": "Local endpoint reachable: http://localhost:8080/signals/latest",
+          "severity": "LOW",
+          "remediation": null
+        },
+        {
+          "check_id": "LIVE_SCHEMA_MATCH",
+          "passed": true,
+          "detail": "Live schema: pf-sovereign-signals/v1 vs claimed: pf-sovereign-signals/v1",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "LIVE_PRODUCER_MATCH",
+          "passed": true,
+          "detail": "Live producer: post-fiat-signals",
+          "severity": "MEDIUM",
+          "remediation": null
+        },
+        {
+          "check_id": "LIVE_SIGNALS_PRESENT",
+          "passed": true,
+          "detail": "Live signals: 4",
+          "severity": "HIGH",
+          "remediation": null
+        },
+        {
+          "check_id": "LIVE_EXTERNAL_REACHABLE",
+          "passed": true,
+          "detail": "External endpoint reachable: http://84.32.34.46:8080/signals/latest",
+          "severity": "LOW",
+          "remediation": null
+        }
+      ],
+      "passed": 5,
+      "failed": 0,
+      "total": 5
+    }
+  ],
+  "critical_failures": []
+}
